@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe para o Gatil da Andrea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f9f7fe 0%, #e3f2fd 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: #6a40bf;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(106, 64, 191, 0.3);
+        }
+        
+        .logo i {
+            font-size: 60px;
+            color: white;
+        }
+        
+        h1 {
+            color: #4a2a80;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #6a40bf;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .info {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pix-box {
+            flex: 1;
+            min-width: 300px;
+            background: linear-gradient(135deg, #6a40bf 0%, #4a2a80 100%);
+            border-radius: 15px;
+            padding: 25px;
+            color: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .pix-key {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            word-break: break-all;
+            backdrop-filter: blur(5px);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #FFD700;
+            color: #4a2a80;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #FFC400;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 40px 0;
+            justify-content: center;
+        }
+        
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+        
+        .social {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .social a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #6a40bf;
+            font-size: 2.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social a:hover {
+            color: #4a2a80;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #6a40bf;
+            font-size: 0.9rem;
+        }
+        
+        .heart {
+            color: #e91e63;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-paw"></i>
+            </div>
+            <h1>Doe para o Gatil da Andrea</h1>
+            <p class="subtitle">Ajude a manter e alimentar nossos gatinhos resgatados</p>
+        </header>
+        
+        <div class="content">
+            <div class="info">
+                <h2>Sobre o Gatil</h2>
+                <p>O Gatil da Andrea é um abrigo que acolhe gatos abandonados e resgatados de maus-tratos, proporcionando cuidado, amor e um lar temporário até que encontrem uma família.</p>
+                <p>Nossa missão é resgatar, tratar e dar uma segunda chance para gatinhos necessitados.</p>
+                <p>Sua doação é essencial para cobrir despesas com:</p>
+                <ul>
+                    <li>Ração de qualidade</li>
+                    <li>Medicamentos e veterinário</li>
+                    <li>Esterilização dos animais</li>
+                    <li>Manutenção do espaço</li>
+                    <li>Material de limpeza</li>
+                </ul>
+            </div>
+            
+            <div class="pix-box">
+                <h2>Faça uma doação via PIX</h2>
+                <p>Chave PIX (CPF):</p>
+                <div class="pix-key" id="pixKey">47984279257</div>
+                <p>Beneficiária: Andrea Pereira Nascimento</p>
+                <button class="btn" id="copyButton">
+                    <i class="fas fa-copy"></i> Copiar Chave PIX
+                </button>
+            </div>
+        </div>
+        
+        <div class="gallery">
+            <img src="https://placekitten.com/300/300?image=1" alt="Gatinho resgatado">
+            <img src="https://placekitten.com/300/300?image=2" alt="Gatinho cuidado">
+            <img src="https://placekitten.com/300/300?image=3" alt="Gatinho feliz">
+        </div>
+        
+        <div class="social">
+            <p>Siga-nos no Instagram para acompanhar nosso trabalho</p>
+            <a href="https://instagram.com/andreapetsittergaspar" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <p>@andreapetsittergaspar</p>
+        </div>
+    </div>
+    
+    <div id="notification" class="notification">
+        Chave PIX copiada com sucesso!
+    </div>
+    
+    <footer>
+        <p>Feito com <span class="heart">❤</span> para os gatinhos do Gatil da Andrea</p>
+    </footer>
+
+    <script>
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const pixKey = document.getElementById('pixKey').textContent;
+            
+            navigator.clipboard.writeText(pixKey).then(function() {
+                const notification = document.getElementById('notification');
+                notification.textContent = 'Chave PIX copiada com sucesso!';
+                notification.style.opacity = '1';
+                
+                setTimeout(function() {
+                    notification.style.opacity = '0';
+                }, 3000);
+            }).catch(function(err) {
+                console.error('Erro ao copiar texto: ', err);
+            });
+        });
+    </script>
+</body>
+</html>
